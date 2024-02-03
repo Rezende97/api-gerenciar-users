@@ -1,0 +1,23 @@
+{
+    "name": "rezende/api_gerenciar_usuario",
+    "description": "Gerenciar usuarios",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Juliano Rezende",
+            "email": "julianomaciel04@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": [
+            "app/Config.php"
+        ]
+    },
+    "require": {
+        "coffeecode/router": "1.0.*"
+    }
+}
