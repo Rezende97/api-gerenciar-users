@@ -33,7 +33,7 @@
         {
             $listUsers = UserModel::select('*');
 
-            $response_user = empty($listUsers) ? 'Lista de usuários não encontrado' : $listUsers;
+            $response_user = empty($listUsers) ? 'Lista de perfil de usuários sem registro' : $listUsers;
 
             return Response::json($response_user, 200);
         }
