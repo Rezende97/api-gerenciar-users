@@ -33,9 +33,15 @@
         {
             $listUsers = UserModel::select('*');
 
-            $response_user = empty($listUsers) ? 'Lista de perfil de usuários sem registro' : $listUsers;
+            if(empty($listUsers)){
+                $this->message = 'Lista de perfil de usuários sem registro';
+                $this->status  = 400;
+            }else{
+                $this->message = $listUsers;
+                $this->status  = 200;
+            }
 
-            return Response::json($response_user, 200);
+            return Response::json($this->message, $this->status);
         }
 
         /**
@@ -58,9 +64,15 @@
 
             $showUser = UserModel::select('*', "id_user = ".$id_user['id_user']);
 
-            $response_user = empty($showUser) ? 'Usuário não encontrado' : $showUser;
+            if(empty($showUser)){
+                $this->message = 'Usuário não encontrado';
+                $this->status  = 400;
+            }else{
+                $this->message = $showUser;
+                $this->status  = 200;
+            }
 
-            return Response::json($response_user, 200);
+            return Response::json($this->message, $this->status);
         }
         
         /**
@@ -235,5 +247,4 @@
 
             return Response::json($this->message, $this->status);
         }
-
     }
