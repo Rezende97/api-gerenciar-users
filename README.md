@@ -53,6 +53,12 @@ create table users (
 6º etapa: 
 Abrir a ferramenta postman para testar os endpoints da api rest
 
+---
+---
+---
+-- endpoint visualizar todos os perfil
+---
+---
 Listar todos os perfil de usuários
 method:
 GET
@@ -61,7 +67,12 @@ endpoint:
 http://colocar o endereço e porta do seu localhost/api-gerenciar-users/
 
 
---
+---
+---
+---
+-- endpoint visualizar perfil
+---
+---
 Visualizar apenas um perfil de usuário
 method:
 GET
@@ -79,7 +90,12 @@ chave do json: "id_user"
 valor: "numero do id do usuário"
 
 
---
+---
+---
+---
+-- endpoint cadastrar perfil
+---
+---
 cadastrar perfil de usuário
 method:
 POST
@@ -102,6 +118,64 @@ chave do json: "email" - valor: "email do usuário"
 chave do json: "cpf" - valor: "cpf do usuário"
 chave do json: "age" - valor: "idade do usuário"
 chave do json: "profession" - valor: "profissão do usuário"
+
+---
+---
+---
+-- endpoint atualizar perfil
+---
+---
+atualizar o perfil do usuário
+method:
+PUT
+
+endpoint:
+http://colocar o endereço e porta do seu localhost/api-gerenciar-users/updateRegisterUser/id
+
+json de request:
+{
+    "id_user": "1",
+    "name": "exemplo",
+    "email": "exemplo@gmail.com",
+    "cpf": "111.111.111-11",
+    "age": "18",
+    "profession": "desenvolvedor"
+}
+
+explicação: 
+chave do json: "id_user" - valor: "id do usuário"
+chave do json: "name" - valor: "nome do usuário"
+chave do json: "email" - valor: "email do usuário"
+chave do json: "cpf" - valor: "cpf do usuário"
+chave do json: "age" - valor: "idade do usuário"
+chave do json: "profession" - valor: "profissão do usuário"
+
+
+---
+---
+---
+-- endpoint excluir perfil
+---
+---
+excluir perfil de usuário
+method:
+DELETE
+
+endpoint:
+http://colocar o endereço e porta do seu localhost/api-gerenciar-users/deleteRegisterUser/id
+
+json de request:
+{
+    "id_user": "1" 
+}
+
+explicação: 
+chave do json: "id_user" - valor: "numero do id do usuário"
+
+
+
+
+
 
 
 
