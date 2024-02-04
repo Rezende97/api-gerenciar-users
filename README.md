@@ -11,7 +11,11 @@ Após instalar o xampp, acesse a pasta htdocs e apague todos os arquivos e pasta
 Instalar o composer 
 link do site para download do composer: https://getcomposer.org/download/
 
-3º etapa: 
+3º etapa:
+Instalar o postman
+link do site para download do postman: https://www.postman.com/
+
+4º etapa: 
 Clonar o repositório ao seu ambiente local
 Acesse o repositorio https://github.com/Rezende97/api-gerenciar-users e faça a clonagem do repositorio por HTTPS
 A clonagem da aplicação precisa ser dentro da pasta htdocs
@@ -21,7 +25,7 @@ Comando para clonagem do repositorio por HTTPS: git clone https://github.com/Rez
 
 Após a clonagem, criar a base de dados
 
-4º etapa: 
+5º etapa: 
 Acesse o phpmyadmin (mysql) do xampp
 
 Obs:
@@ -46,4 +50,4 @@ create table users (
 
 *Esses comando sql estão na aplicação na pasta migration
 
-5º etapa: 
+6º etapa: 
