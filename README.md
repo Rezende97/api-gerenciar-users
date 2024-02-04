@@ -53,6 +53,13 @@ create table users (
 6º etapa: 
 Abrir a ferramenta postman para testar os endpoints da api rest
 
+Obs: 
+identificar qual o endereço e porta do seu localhost
+exemplo:
+http://localhost/api-gerenciar-users/
+ou
+http://localhost:90/api-gerenciar-users/
+
 ---
 ---
 ---
