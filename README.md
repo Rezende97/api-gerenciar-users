@@ -25,7 +25,7 @@ create database gerenciar_users
 Após criar a base de dados, crie a tabela: users
 Comando para criar a tabela:
 create table users (
-	id_users int primary key auto_increment,
+	id_user int primary key auto_increment,
 	name varchar(150) not null,
 	email varchar(150) not null,
 	cpf varchar(11) not null unique,
