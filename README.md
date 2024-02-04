@@ -51,3 +51,57 @@ create table users (
 *Esses comando sql estão na aplicação na pasta migration
 
 6º etapa: 
+Abrir a ferramenta postman para testar os endpoints da api rest
+
+Listar todos os perfil de usuários
+method:
+GET
+
+endpoint: 
+http://colocar o endereço e porta do seu localhost/api-gerenciar-users/
+
+
+--
+Visualizar apenas um perfil de usuário
+method:
+GET
+
+endpoint:
+http://colocar o endereço e porta do seu localhost/api-gerenciar-users/showUser/id
+
+json de request:
+{
+    "id_user": "1" 
+}
+
+explicação: 
+chave do json: "id_user"  
+valor: "numero do id do usuário"
+
+
+--
+cadastrar perfil de usuário
+method:
+POST
+
+endpoint:
+http://colocar o endereço e porta do seu localhost/api-gerenciar-users/registerUser
+
+json de request:
+{
+    "name": "exemplo",
+    "email": "exemplo@gmail.com",
+    "cpf": "111.111.111-11",
+    "age": "18",
+    "profession": "desenvolvedor"
+}
+
+explicação: 
+chave do json: "name" - valor: "nome do usuário"
+chave do json: "email" - valor: "email do usuário"
+chave do json: "cpf" - valor: "cpf do usuário"
+chave do json: "age" - valor: "idade do usuário"
+chave do json: "profession" - valor: "profissão do usuário"
+
+
+
