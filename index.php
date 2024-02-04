@@ -14,11 +14,16 @@
      * 
      */
     $router->group(null);
-    $router->get("/", "UserController:index");
-    $router->get("/show", "UserController:visible");
-    $router->post("/register", "UserController:cadastrar");
-    $router->put("/updateRegister", "UserController:atualizar");
-    $router->delete("/deleteRegister", "UserController:apagar");
+    // Listar todos os usuários
+    $router->get("/", "UserController:showListUsers");
+    // Listar apenas um usuário
+    $router->get("/showUser/id", "UserController:showUser");
+    // cadastrar usuário
+    $router->post("/registerUser", "UserController:registerUser");
+    // atualizar dados do usuário
+    $router->put("/updateRegisterUser/id", "UserController:updateUser");
+    // excluir usuário
+    $router->delete("/deleteRegisterUser/id", "UserController:deleteUser");
 
     /**
      * 
@@ -26,7 +31,7 @@
      * 
      */
     $router->group("error");
-    $router->get("/{errcode}", "UserController:error");
+    $router->get("/{errcode}", "ErrorController:error");
 
     $router->dispatch();
 

@@ -16,7 +16,6 @@
         private static function conexao()
         {
             try {
-
                 $pdo = new PDO("mysql:host=".self::$host.";dbname=".self::$database.";charset=".self::$charset, self::$user, self::$password);
                 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             } catch (PDOException $e) {
