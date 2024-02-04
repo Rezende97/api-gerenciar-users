@@ -33,15 +33,9 @@
         {
             $listUsers = UserModel::select('*');
 
-            if(empty($listUsers)){
-                $this->message = 'Lista de perfil de usuários sem registro';
-                $this->status  = 400;
-            }else{
-                $this->message = $listUsers;
-                $this->status  = 200;
-            }
+            $response_user = empty($listUsers) ? 'Lista de perfil de usuários sem registro' : $listUsers;
 
-            return Response::json($this->message, $this->status);
+            return Response::json($response_user, 200);
         }
 
         /**
@@ -247,4 +241,5 @@
 
             return Response::json($this->message, $this->status);
         }
+
     }
